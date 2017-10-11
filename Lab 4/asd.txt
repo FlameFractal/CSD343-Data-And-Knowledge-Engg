@@ -1,0 +1,5 @@
+- normal wormhole instead of pits
+- special wormhole
+- multi level golds , come back to original 
+- arrow cost 2^(x/4)
+- calculate avg complexity as the avg probability of dying in next move (1move) from every square and display at the start

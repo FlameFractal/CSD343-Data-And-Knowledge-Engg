@@ -1,0 +1,38 @@
+Q3
+
+```python
+f = file("words.txt").read()
+
+for word in f.split():
+    count = 0
+    for char in word:
+        count = count + 1
+    if(count>20):
+        print(word)
+```
+
+
+
+Q4
+
+```python
+def fn(string):
+    count = 0
+    for i in string:
+        count = count + 1
+    print(string+str(count))
+        
+fn("asdasd")
+```
+
+
+
+Q5
+
+```python
+def lol(list):
+    del list[0]
+    del list[-1]
+    return list
+```
+
