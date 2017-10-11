@@ -3,7 +3,7 @@ Course Labs & Project
 
 
 
-##Links
+## Links
 
 - [Muniverse Github](https://github.com/unixpickle/muniverse)
 
@@ -15,9 +15,9 @@ Course Labs & Project
 
 - [Siraj's Code for OpenAI Gamebot](https://github.com/llSourcell/OpenAI_Game_Bot_Live_stream)
 
-  ​
+  
 
-##Finalised details
+## Finalised details
 
 1. a game bot
 2. for a simple game
@@ -25,14 +25,14 @@ Course Labs & Project
 
 
 
-##Still need to decide:
+## Still need to decide:
 
 1. platform (universe or muniverse)
 2. which game
 
 
 
-##project (start now)
+## project (start now)
 
 - description by next week
 - implement project 
