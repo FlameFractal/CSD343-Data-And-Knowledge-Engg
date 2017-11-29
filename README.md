@@ -1,46 +1,48 @@
-# CSD343-Data-And-Knowledge-Engg
-Course Labs & Project
+###CSD343-Data-And-Knowledge-Engg - Course Labs & Project
 
 
 
-## Links
+# Project README
 
-- [Muniverse Github](https://github.com/unixpickle/muniverse)
-
-- [Universe Github](https://github.com/openai/universe)
-
-- [Basic code explanation Universe](https://medium.freecodecamp.org/how-to-build-an-ai-game-bot-using-openai-gym-and-universe-f2eb9bfbb40a)
-
-- [Siraj's Video on Gamebot](https://www.youtube.com/watch?v=XI-I9i_GzIw)
-
-- [Siraj's Code for OpenAI Gamebot](https://github.com/llSourcell/OpenAI_Game_Bot_Live_stream)
-
-
-## Finalised details
-
-1. a game bot
-2. for a simple game
-3. using reinforcement learning                        
+The goal of this project is to use reinforcement learning to build a game bot. OpenAI's Gym library is used to interface with the game.
 
 
 
-## Still need to decide:
+## Video
 
-1. platform (universe or muniverse)
-2. which game
+ [Youtube Link](https://www.youtube.com/watch?v=G7Zdvnme73I).
 
 
-## Proposal
 
-> We would like to create a AI game bot using OpenAI's platform Universe.
->
-> Universe is a software platform that can be used for measuring and training the performance of AI programs across a diverse range of games, websites and other applications. Universe turns any program (such as a game) into an environment which can be used to train and test a bot, or a general AI agent. It does this by packaging the program into a Docker container, and presenting the AI with the same interface a human uses: sending keyboard and mouse events, and receiving screen pixels.
->
-> Our bot would use reinforcement learning, because some environments in Universe such as a flash game for example, provide reward signals which can be used guide reinforcement learning. The bot shall be able to gradually learn from the reward signals it gets, and modify its behaviour to converge at a reasonably optimal strategy for playing the game.
+## Game
 
-## project (start now)
+The game used in this project is called `CartPole`. In this game, the player has to balance a rotating pole on a cart - by moving the cart left (`action=0`) or right (`action=1`)
 
-- description by next week
-- implement project 
-- data science vs knowledge engg project
-  - either use a cluster (parallel/distributed) or a big data project using hadoop
+For each time unit, that the pole stands upright, we get 1 point. Maximum points possible are 200. If the pole tips over then the game ends and the gym environment returns "done" as a value.
+
+The game environment provides us with four observations which we can use to make our decision :
+1. Cart's position
+
+2. Cart' velocity
+
+3. Pole's angle with the cart
+
+4. Pole's angular velocity
+
+   ​
+
+## Algorithms
+
+1. **Random** - choose the action randomly
+2. **Random Weighted -** use a linear weighted combination of the four observations using random weights
+3. **Noisy Weighted -** improve the weights in the second algorithm by inducing noise every time
+4. **Hardcoded -** a set of weights calculated by taking mean of ten thousand successful games
+
+
+
+
+## Run the project
+
+- Install `python3`
+- Install the dependencies using pip -  `gym` and `numpy`
+- open a terminal and run the command `python gamebot_cartpole.py x` where x=1,2,3,4 for running one of the four algorithms
